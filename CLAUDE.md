@@ -36,11 +36,26 @@ Current structure:
 - Keep metadata minimal and purposeful
 - Tags are enabled but should be used sparingly compared to links
 
+### Note Types
+
+There are two complementary note types used in this vault:
+
+1. **Concept note** — atomic, definitional. Captures a single idea: what it is, why it matters, key principles, and links to related concepts. Title is the concept name (e.g., "Tool Calling"). This is the canonical note for that idea and should remain concise.
+
+2. **Source summary note** — longer, narrative. Summarizes a specific article, thread, talk, or resource in detail. Title reflects the source (e.g., "Lessons from Building Claude Code - Seeing like an Agent"). Always includes a `## References` section linking back to the original URL.
+
+When processing a new source:
+- Create a **source summary note** with a full breakdown of the content
+- Identify the key concepts it introduces or expands on
+- Create or update the corresponding **concept notes**, linking to the source summary
+- The source summary should link back to all related concept notes via `[[wikilinks]]`
+
 ### Content Guidelines
 - Write in complete sentences and paragraphs
 - Define concepts clearly at the beginning of notes
 - Build upon definitions with examples, applications, and connections
 - Use markdown formatting: headers for sections, bold for key terms, lists for structure
+- When a note is based on articles or external sources, add a `## References` section at the bottom with markdown links to the source URLs
 
 ### File Organization
 - Don't create deeply nested folder structures (max 2-3 levels)
